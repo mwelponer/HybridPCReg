@@ -42,7 +42,7 @@ public class Point extends Vector3d {
     @Getter @Setter private float threshold;
 
     private double[] propertiesValues;
-    private float[] propertiesNormValues;
+    private double[] propertiesNormValues;
 
     public Point(double x, double y, double z) {
         super.x = x; super.y = y; super.z = z;
@@ -55,7 +55,7 @@ public class Point extends Vector3d {
         this.r = 0; this.g = 0; this.b = 0;
 
         propertiesValues = new double[type.getProps().length];
-        propertiesNormValues = new float[type.getProps().length];
+        propertiesNormValues = new double[type.getProps().length];
     }
 
     public Point(FileType type, double x, double y, double z, int r, int g, int b) {
@@ -64,7 +64,7 @@ public class Point extends Vector3d {
         this.r = r; this.g = g; this.b = b;
 
         propertiesValues = new double[type.getProps().length];
-        propertiesNormValues = new float[type.getProps().length];
+        propertiesNormValues = new double[type.getProps().length];
     }
 
     public void move(double x, double y, double z){
@@ -143,7 +143,7 @@ public class Point extends Vector3d {
     public void setProp(int propertyIndex, Double value){ propertiesValues[propertyIndex] = value;}
     public void setNormProp(int propertyIndex, float value){propertiesNormValues[propertyIndex] = value;    }
     public double getProp(int propertyIndex){return propertiesValues[propertyIndex];}
-    public float getNormProp(int propertyIndex){return propertiesNormValues[propertyIndex];}
+    public double getNormProp(int propertyIndex){return propertiesNormValues[propertyIndex];}
 
     public double length(Point p){
         return Math.sqrt(this.dot(p));

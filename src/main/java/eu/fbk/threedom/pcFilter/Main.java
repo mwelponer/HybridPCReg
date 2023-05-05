@@ -145,7 +145,7 @@ public class Main {
                 List<Point> points = (voxelSide != 0) ? pcf.getPoints(ft, true) : pcf.getPoints(ft, false);
 
                 // transform arrayList to array
-                float[] values = new float[points.size()];
+                double[] values = new double[points.size()];
 
                 if(values.length == 0) break;
 
@@ -158,8 +158,8 @@ public class Main {
                 else
                     System.out.println(".." + prop + " values (normalized) " + values.length + " values");
 
-                float med = Stats.median(values, values.length);
-                float mad = Stats.mad(values, values.length);
+                double med = Stats.median(values, values.length);
+                double mad = Stats.mad(values, values.length);
                 System.out.println("....med: " + med + "\n....mad: " + mad
                         + "\n....sigmaM: " + (mad * 1.4826)
                         + "\n....3sigmaM: " + 3 * (mad * 1.4826));

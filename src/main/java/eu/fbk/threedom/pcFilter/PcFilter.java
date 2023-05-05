@@ -421,7 +421,7 @@ public class PcFilter {
         for(String str : formula.split(" ")){
             // if it is a property, retrieve its value
             if(propsStats.containsKey(str + "_N")) {
-                float value = p.getNormProp(getPropertyIndex(p.getType(), str));
+                double value = p.getNormProp(getPropertyIndex(p.getType(), str));
                 sb.append(String.valueOf(value));
             }else
                 sb.append(str);

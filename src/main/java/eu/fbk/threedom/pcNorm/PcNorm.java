@@ -144,7 +144,8 @@ public class PcNorm {
                         Float.parseFloat(token[2]) - this.min.getZ(), // z
                         Integer.parseInt(token[3]),
                         Integer.parseInt(token[4]),
-                        Integer.parseInt(token[5]));
+                        Integer.parseInt(token[5])
+                        );
                 p.setClassification(PointClassification.parse(Integer.parseInt(token[6].substring(0, 1))));
 
 
